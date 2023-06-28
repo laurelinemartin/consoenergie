@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as ml
-PATH = "Enedis_M021_CDC_E427P41Q_16111287961486.csv"
+PATH = "../include/Enedis_M021_CDC_EZFY_16111287961486.csv"
 MAX_DATE = 4464
 MAX_DATE_VAC = 3024
 D_H_DEPART_SEM = 1681 	# Commence le 6/12/21 (début de semaine à minuit)
