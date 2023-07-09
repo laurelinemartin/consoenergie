@@ -10,9 +10,6 @@ MAXLINES = 18192
 	# ~ return f
 
 def calculConsoTotaleMois(f):
-    print(type(f))
-    f = f.sort_values(by='datedebut')
-    print(f)
     i = 1
     print(f.iloc[i].at['datedebut'])
     date = f.iloc[i].at['datedebut'][:7]
@@ -41,11 +38,11 @@ if __name__ == '__main__':
 	print(data)
 	
 	# Calculs :
-	dfProdMois = calculConsoTotaleMois(data)
+	dfProdMois = calculConsoTotaleMois(data.sort_values(by='datedebut'))
 
     # Visualisation :
 	ml.title("Production totale d'énergie mois par mois (paneaux photovoltaïque)")
-	ml.plot(dfProdMois['Date'], 
+	ml.bar(dfProdMois['Date'], 
         dfProdMois['valuepv'], 
         color = 'blue', 
         label = "Production par mois")
